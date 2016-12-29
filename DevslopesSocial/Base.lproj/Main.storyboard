@@ -81,27 +81,36 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4F4-2l-8Ee">
-                                <rect key="frame" x="46" y="405" width="283" height="117"/>
+                                <rect key="frame" x="46" y="405" width="283" height="137"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4o4-Fh-J8Q" customClass="FancyTextField" customModule="DevslopesSocial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="283" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9Ce-IN-6ab"/>
+                                        </constraints>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIu-MF-QYL" customClass="FancyTextField" customModule="DevslopesSocial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="283" height="30"/>
+                                        <rect key="frame" x="0.0" y="50" width="283" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Pw2-ae-Ygm"/>
+                                        </constraints>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gm-zg-SUP" customClass="FancyButton" customModule="DevslopesSocial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="80" width="283" height="37"/>
+                                        <rect key="frame" x="0.0" y="100" width="283" height="37"/>
                                         <color key="backgroundColor" red="0.8666666666666667" green="0.17254901960784313" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZZM-FM-FfJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -125,6 +134,10 @@
                             <constraint firstItem="EYP-kF-Gtt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xl5-as-Su5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="4o4-Fh-J8Q" id="TqQ-1i-fiA"/>
+                        <outlet property="passwordField" destination="qIu-MF-QYL" id="58O-gb-jMK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
