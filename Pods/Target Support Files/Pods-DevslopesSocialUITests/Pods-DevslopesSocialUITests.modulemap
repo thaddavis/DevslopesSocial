@@ -1,0 +1,6 @@
+framework module Pods_DevslopesSocialUITests {
+  umbrella header "Pods-DevslopesSocialUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
