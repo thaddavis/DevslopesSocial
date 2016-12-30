@@ -192,13 +192,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HOk-RW-LYM">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-eI-oOv">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-eI-oOv">
                                                 <rect key="frame" x="0.0" y="4.5" width="40" height="40"/>
                                                 <color key="backgroundColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="83S-iq-ls2"/>
                                                     <constraint firstAttribute="height" constant="40" id="NsG-mj-4ZI"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="l5q-DC-Mqv" appends="YES" id="C4b-uR-bqF"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ujE-hw-WOj" customClass="FancyTextField" customModule="DevslopesSocial" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="8" width="227" height="33"/>
@@ -246,7 +250,7 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="311"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k3f-ry-lro">
-                                                            <rect key="frame" x="5" y="5" width="333" height="284"/>
+                                                            <rect key="frame" x="5" y="5" width="333" height="283.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7e-Vr-2Cg">
                                                                     <rect key="frame" x="0.0" y="0.0" width="333" height="60"/>
@@ -295,7 +299,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-44-tiS">
-                                                            <rect key="frame" x="233" y="290" width="80" height="20"/>
+                                                            <rect key="frame" x="233" y="290.5" width="80" height="19.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8B-9p-ts8">
                                                                     <rect key="frame" x="0.0" y="0.0" width="31" height="19.5"/>
@@ -357,14 +361,20 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="hk7-eI-oOv" id="wmu-K0-hI1"/>
                         <outlet property="tableView" destination="Q95-I3-gWw" id="zzy-nS-9Zb"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignin" id="1cs-bM-ymF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDu-lq-A2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cY1-Re-N2x">
+                <tapGestureRecognizer id="cY1-Re-N2x" userLabel="Tap Gesture Recognizer - SignOut">
                     <connections>
                         <action selector="signOutTapped:" destination="9Sn-JA-e48" id="0LT-YS-BBo"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="l5q-DC-Mqv" userLabel="Tap Gesture Recognizer - ImagePicker">
+                    <connections>
+                        <action selector="addImageTapped:" destination="9Sn-JA-e48" id="VKQ-14-sGu"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
