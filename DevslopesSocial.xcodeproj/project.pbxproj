@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		10650B598745D8186B68421C /* Pods_DevslopesSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E59E18188AF2C58C72AFF37 /* Pods_DevslopesSocial.framework */; };
+		892651AC1E15E00E004DA95A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892651AB1E15E00E004DA95A /* FeedVC.swift */; };
+		892651AD1E15E00E004DA95A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892651AB1E15E00E004DA95A /* FeedVC.swift */; };
+		892651AE1E15E00E004DA95A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892651AB1E15E00E004DA95A /* FeedVC.swift */; };
 		896A5D891E14CF6900ACDA8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896A5D881E14CF6900ACDA8E /* AppDelegate.swift */; };
 		896A5D8B1E14CF6900ACDA8E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896A5D8A1E14CF6900ACDA8E /* SignInVC.swift */; };
 		896A5D8E1E14CF6900ACDA8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896A5D8C1E14CF6900ACDA8E /* Main.storyboard */; };
@@ -63,6 +66,7 @@
 		560CFC8F21B698A8ADD45838 /* Pods-DevslopesSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevslopesSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevslopesSocial/Pods-DevslopesSocial.release.xcconfig"; sourceTree = "<group>"; };
 		562033474AE25BBA8B30F0B3 /* Pods-DevslopesSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevslopesSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevslopesSocial/Pods-DevslopesSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		58C05B56C6235F7D063A6903 /* Pods-DevslopesSocialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevslopesSocialUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevslopesSocialUITests/Pods-DevslopesSocialUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		892651AB1E15E00E004DA95A /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		896A5D851E14CF6900ACDA8E /* DevslopesSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevslopesSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		896A5D881E14CF6900ACDA8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		896A5D8A1E14CF6900ACDA8E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				896A5D8A1E14CF6900ACDA8E /* SignInVC.swift */,
+				892651AB1E15E00E004DA95A /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892651AC1E15E00E004DA95A /* FeedVC.swift in Sources */,
 				896A5D8B1E14CF6900ACDA8E /* SignInVC.swift in Sources */,
 				89F0E6611E15AA1700E84265 /* FancyButton.swift in Sources */,
 				89F0E6551E1597AE00E84265 /* RoundButton.swift in Sources */,
@@ -535,6 +541,7 @@
 				89F0E6561E1597AE00E84265 /* RoundButton.swift in Sources */,
 				89F0E64D1E15942B00E84265 /* FancyView.swift in Sources */,
 				89F0E6621E15AA1700E84265 /* FancyButton.swift in Sources */,
+				892651AD1E15E00E004DA95A /* FeedVC.swift in Sources */,
 				89F0E65E1E15A87200E84265 /* FancyTextField.swift in Sources */,
 				896A5D9E1E14CF6900ACDA8E /* DevslopesSocialTests.swift in Sources */,
 				89F0E6521E15951B00E84265 /* Constants.swift in Sources */,
@@ -549,6 +556,7 @@
 				89F0E6571E1597AE00E84265 /* RoundButton.swift in Sources */,
 				89F0E64E1E15942B00E84265 /* FancyView.swift in Sources */,
 				89F0E6631E15AA1700E84265 /* FancyButton.swift in Sources */,
+				892651AE1E15E00E004DA95A /* FeedVC.swift in Sources */,
 				89F0E65F1E15A87200E84265 /* FancyTextField.swift in Sources */,
 				896A5DA91E14CF6900ACDA8E /* DevslopesSocialUITests.swift in Sources */,
 				89F0E6531E15951B00E84265 /* Constants.swift in Sources */,
@@ -687,6 +695,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 562033474AE25BBA8B30F0B3 /* Pods-DevslopesSocial.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DevslopesSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -700,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 560CFC8F21B698A8ADD45838 /* Pods-DevslopesSocial.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DevslopesSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

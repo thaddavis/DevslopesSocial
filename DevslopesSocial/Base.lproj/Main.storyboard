@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign InVC-->
+        <!--SignInVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="DevslopesSocial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="SignInVC" customClass="SignInVC" customModule="DevslopesSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -137,11 +137,50 @@
                     <connections>
                         <outlet property="emailField" destination="4o4-Fh-J8Q" id="TqQ-1i-fiA"/>
                         <outlet property="passwordField" destination="qIu-MF-QYL" id="58O-gb-jMK"/>
+                        <segue destination="9Sn-JA-e48" kind="show" identifier="goToFeed" id="pMG-ye-GKt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="uEs-vz-wHF">
+            <objects>
+                <viewController id="9Sn-JA-e48" customClass="FeedVC" customModule="DevslopesSocial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="58k-Ru-S8g"/>
+                        <viewControllerLayoutGuide type="bottom" id="d4B-f4-EUg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CLd-EN-pDs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-3g-yDv">
+                                <rect key="frame" x="142.5" y="288.5" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="fvK-RF-e7d"/>
+                                    <constraint firstAttribute="width" constant="90" id="r3Y-cL-B5j"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="9Sn-JA-e48" eventType="touchUpInside" id="3Y7-2u-f7o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dgb-3g-yDv" firstAttribute="centerX" secondItem="CLd-EN-pDs" secondAttribute="centerX" id="b6d-Ro-gkM"/>
+                            <constraint firstItem="dgb-3g-yDv" firstAttribute="centerY" secondItem="CLd-EN-pDs" secondAttribute="centerY" id="wkf-Zw-rg8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignin" id="1cs-bM-ymF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDu-lq-A2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="-5"/>
         </scene>
     </scenes>
     <resources>
